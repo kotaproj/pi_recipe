@@ -1,11 +1,8 @@
-
-# 4rc:~/pi_recipe/basic $ sudo apt-get install fonts-noto
-# pe/basic $ sudo apt-get install fonts-ipafont
-
 import board
 import digitalio
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_ssd1306
+from time import sleep
 
 # SSD1306のピン設定
 DEVICE_ADR = 0x3C
@@ -31,6 +28,12 @@ def main():
 
     # Display image
     oled.image(image)
+    oled.show()
+    
+    sleep(5)
+
+    # Clear display.
+    oled.fill(0)
     oled.show()
     return
 

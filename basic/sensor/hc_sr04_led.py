@@ -15,9 +15,10 @@ PIN_LED1 = 21
 def main():
     # ピン設定
     factory = PiGPIOFactory()
+    # sensor = DistanceSensor(PIN_ECHO, PIN_TRIG, max_distance=1, threshold_distance=0.1, pin_factory=factory)
     # sensor = DistanceSensor(PIN_ECHO, PIN_TRIG, max_distance=1, threshold_distance=0.2, pin_factory=factory)
-    # sensor = DistanceSensor(PIN_ECHO, PIN_TRIG, max_distance=1, threshold_distance=0.3, pin_factory=factory)
-    sensor = DistanceSensor(PIN_ECHO, PIN_TRIG, max_distance=1, threshold_distance=0.7, pin_factory=factory)
+    sensor = DistanceSensor(PIN_ECHO, PIN_TRIG, max_distance=1, threshold_distance=0.3, pin_factory=factory)
+    # sensor = DistanceSensor(PIN_ECHO, PIN_TRIG, max_distance=1, threshold_distance=0.7, pin_factory=factory)
     # sensor = DistanceSensor(PIN_ECHO, PIN_TRIG, max_distance=1, threshold_distance=0.4, pin_factory=factory)
     led = LED(PIN_LED1, pin_factory=factory)
 
